@@ -51,9 +51,9 @@ def ld_spider():
 
         # tweet!
         print('Tweeting: ' + tweet)
-        # api.update_with_media('img.jpg', tweet)
-        # fw = open('data.txt', 'a')
-        # fw.write(str(url) + '\n')
+        api.update_with_media('img.jpg', tweet)
+        fw = open('data.txt', 'a')
+        fw.write(str(url) + '\n')
 
 # DOWNLOAD FIRST SCREENSHOT IN A ENTRY PAGE
 def download_game_image(game_url):
