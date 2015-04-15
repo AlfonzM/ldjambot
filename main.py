@@ -30,26 +30,30 @@ def ld_spider():
     # get a random n from all the tds
     index = random.randrange(0,len(tds))
 
-    # get the title of that item
-    title = tds[index].find('i').string
-
     # get the url of that item
     url = 'http://ludumdare.com/compo/' + ld_number + '/' + tds[index].find('a').get('href')
 
-    # get author of that item
-    author = tds[index].img.contents[1]
+    if game_already_tweeted(url):
+        print('Already exists: ' + url)
+        ld_spider()
+    else:
+        # get the title of that item
+        title = tds[index].find('i').string
 
-    # download the first screenshot
-    download_game_image(url)
+        # get author of that item
+        author = tds[index].img.contents[1]
 
-    # prepare tweet string
-    tweet = title + ' by ' + author + ' - ' + url
+        # download the first screenshot
+        download_game_image(url)
 
-    # tweet!
-    print('Tweeting: ' + tweet)
-    api.update_with_media('img.jpg', tweet)
+        # prepare tweet string
+        tweet = title + ' by ' + author + ' - ' + url + ' #LDJAM'
 
-    # append_to_data(url)
+        # tweet!
+        print('Tweeting: ' + tweet)
+        # api.update_with_media('img.jpg', tweet)
+        # fw = open('data.txt', 'a')
+        # fw.write(str(url) + '\n')
 
 # DOWNLOAD FIRST SCREENSHOT IN A ENTRY PAGE
 def download_game_image(game_url):
@@ -87,13 +91,14 @@ def get_random_entries_page():
     return page_link
 
 # SAVE ALL THE TWEETED ENTRIES TO PREVENT DUPLICATES
-def append_to_data(url):
-    fw = open('data.txt', 'a')
-    # text = 
+def game_already_tweeted(url):
+    fr = open('data.txt', 'r')
+    text = fr.read()
 
     if url not in text:
-        fw.write(str(x) + '\n')
+        return False
 
+    return True
 
 
 # START BOT
