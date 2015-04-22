@@ -1,6 +1,7 @@
 from pync import Notifier
 import time
 import os
+import json
 import random
 import urllib.request
 import requests
@@ -17,8 +18,8 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
 
-ld_number = 'ludum-dare-32'
-# ld_number = 'minild-58'
+# ld_number = 'ludum-dare-32'
+ld_number = 'minild-58'
 
 def ld_spider():
     print("Tweeting...")
@@ -53,10 +54,10 @@ def ld_spider():
         tweet = prepareTweet(title, author, url)
 
         # tweet!
-        print(time.strftime("%m/%d/%Y %I:%M %p") + '\n' + title + ' by ' + author +' \n' + url)
-        api.update_with_media('img.jpg', tweet)
-        fw = open('data.txt', 'a')
-        fw.write(str(url) + '\n')
+        print(time.strftime("%m/%d/%Y %H:%M") + '\n' + title + ' by ' + author +' \n' + url)
+        # api.update_with_media('img.jpg', tweet)
+        # fw = open('data.txt', 'a')
+        # fw.write(str(url) + '\n')
         Notifier.notify(title + ' by ' + author, contentImage='img.jpg', appIcon='pp.png', title='@LDJAMBot', open='http://twitter.com/ldjambot')
         print("---")
 
@@ -116,6 +117,22 @@ def game_already_tweeted(url):
 
     return True
 
+class RetweetLDJAM(tweepy.StreamListener):
+    def on_data(self, data):
+        # Twitter returns data in JSON format - we need to decode it first
+        jsonData = json.loads(data)
+
+        # Also, we convert UTF-8 to ASCII ignoring all bad characters sent by users
+        print('Tweet: ' + jsonData['user']['screen_name'], jsonData['text'].encode('ascii', 'ignore'))
+        return True
+
+    def on_error(self, status):
+        print(status)
 
 # START BOT
-ld_spider()
+# ld_spider()
+
+if __name__ == '__main__':
+    streamListener = RetweetLDJAM()
+    twitterStream = tweepy.Stream(auth,streamListener)
+    twitterStream.filter(track=['LDJAM'])
