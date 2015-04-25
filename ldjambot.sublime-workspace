@@ -1,0 +1,523 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"twitter",
+				"twitterUrl"
+			],
+			[
+				"tw",
+				"twitterUser"
+			],
+			[
+				"twtt",
+				"twitterHandle"
+			],
+			[
+				"twiter",
+				"twitterHandle"
+			],
+			[
+				"Im",
+				"img_url"
+			],
+			[
+				"downlo",
+				"download_game_image"
+			],
+			[
+				"get_",
+				"get_max_pages"
+			],
+			[
+				"ig",
+				"img_url"
+			],
+			[
+				"backg",
+				"background-size"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"img-ci",
+				"img-circle"
+			],
+			[
+				"backgrou",
+				"background-color"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"bak",
+				"background-color"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"fot",
+				"font-family"
+			],
+			[
+				"atk",
+				"atker"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.py",
+			"settings":
+			{
+				"buffer_size": 4985,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test.py",
+			"settings":
+			{
+				"buffer_size": 4497,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "stream.py",
+			"settings":
+			{
+				"buffer_size": 1116,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"command_palette":
+	{
+		"height": 87.0,
+		"selected_items":
+		[
+			[
+				"close",
+				"Project: Close"
+			],
+			[
+				"projec",
+				"Project: Close"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			],
+			[
+				"word",
+				"Word Wrap: Toggle"
+			],
+			[
+				"d",
+				"Set Syntax: D"
+			],
+			[
+				"wo",
+				"Word Wrap: Toggle"
+			],
+			[
+				"pytho",
+				"Set Syntax: Python"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"rub",
+				"Set Syntax: Ruby on Rails"
+			],
+			[
+				"java",
+				"Set Syntax: Java"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"scss",
+				"Set Syntax: CSS"
+			],
+			[
+				"obje",
+				"Set Syntax: Objective-C"
+			],
+			[
+				"HTML",
+				"Set Syntax: HTML"
+			],
+			[
+				"htl",
+				"HTML: Encode Special Characters"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/usr/local/bin/symfony",
+		"/Users/AlfonzM/Documents/Dev/Python/LDJam-Bot/stream.py",
+		"/Users/AlfonzM/Documents/Dev/Python/LDJam-Bot/ldjambot.sublime-project",
+		"/Users/AlfonzM/Documents/Dev/Python/LDJam-Bot/test.py",
+		"/Users/AlfonzM/Documents/Dev/Python/LDJam-Bot/main.py",
+		"/Users/AlfonzM/Documents/Dev/Python/LDJam-Bot/README.md",
+		"/Applications/MAMP/htdocs/chromedia-test/index.php",
+		"/Applications/MAMP/htdocs/chromedia-test/index.html",
+		"/Users/AlfonzM/Documents/Dev/Python/LDJam-Bot/data.txt",
+		"/Users/AlfonzM/Documents/Work/angular/helloworld/index.html",
+		"/Users/AlfonzM/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/AlfonzM/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/AlfonzM/Library/Application Support/Sublime Text 2/Packages/User/OpenSafari.sublime-build",
+		"/Users/AlfonzM/Documents/Dev (local)/Python/LDJam-Bot/stream.py",
+		"/Users/AlfonzM/Documents/Dev (local)/Python/LDJam-Bot/main.py",
+		"/Users/AlfonzM/Documents/Dev (local)/Python/LDJam-Bot/data.txt",
+		"/Users/AlfonzM/Documents/Dev (local)/Python/LDJam-Bot/test.py",
+		"/Users/AlfonzM/Dropbox/AutoHotkey/Scripts.ahk",
+		"/Users/AlfonzM/Dropbox/AutoHotkey/spotify.ahk",
+		"/Users/AlfonzM/Documents/Dev (local)/Python/LDJam-Bot/notif.py",
+		"/Users/AlfonzM/Pictures/Profile Photos/aboutme.txt",
+		"/Users/AlfonzM/Documents/Dev (local)/Python/LDJam-Bot/.gitignore",
+		"/Users/AlfonzM/Documents/Dev (local)/Python/LDJam-Bot/file.py",
+		"/Users/AlfonzM/Documents/Dev (local)/Python/LDJam-Bot/sample.txt",
+		"/Applications/MAMP/htdocs/test/index.php",
+		"/Users/AlfonzM/Documents/Dev (local)/Unity Projects/MiniLD58/.gitignore",
+		"/Users/AlfonzM/Documents/Dev (local)/Unity Projects/MiniLD58/Assets/Scripts/PlayerController.cs",
+		"/Users/AlfonzM/Documents/Dev (local)/Python/Awesome-Bot/script.py",
+		"/Users/AlfonzM/Desktop/py.sh",
+		"/Users/AlfonzM/Documents/Dev (local)/Python/LDJam-Bot/keys.py",
+		"/Users/AlfonzM/Documents/Dev (local)/Websites/alfonzm.github.io/index.html",
+		"/Users/AlfonzM/Documents/Dev (local)/Websites/alfonzm.github.io/js/script.js",
+		"/Users/AlfonzM/Documents/Dev (local)/Websites/alfonzm.github.io/css/style.css",
+		"/Users/AlfonzM/Desktop/cebupac.txt",
+		"/Users/AlfonzM/Downloads/Mockup1-master/index.html",
+		"/Users/AlfonzM/Downloads/Mockup1-master/css/style.css",
+		"/Users/AlfonzM/Dropbox/Dev/aztl/PrototypeGame1/Assets/Scripts/Score.cs",
+		"/Users/AlfonzM/Desktop/sass test/index.html",
+		"/Users/AlfonzM/Desktop/sass test/css.sass",
+		"/Users/AlfonzM/Desktop/sass test/_reset.scss",
+		"/Users/AlfonzM/Desktop/sass test/css.scss.haml",
+		"/Users/AlfonzM/Desktop/krisel notes",
+		"/Users/AlfonzM/Downloads/gifsicle-1.87/INSTALL",
+		"/Users/AlfonzM/Dropbox/Dev/aztl/SteakTower/Assets/Steak.cs",
+		"/Users/AlfonzM/Dropbox/Dev/aztl/SteakTower/Assets/MenuSteak.cs",
+		"/Users/AlfonzM/Dropbox/Work/oDesk/cover letters.txt",
+		"/Users/AlfonzM/Dropbox/Work/oDesk/questions.d",
+		"/Users/AlfonzM/Desktop/iosnotes.m",
+		"/Users/AlfonzM/Documents/Dev (local)/Websites/alfonzmontelibano.tumblr.com/theme.html",
+		"/Users/AlfonzM/Documents/Nix/nix blog/nixtumblr.html",
+		"/Users/AlfonzM/Desktop/nixtumblr.html",
+		"/Users/AlfonzM/Dropbox/Public/AZTLGames/AerithIV/AerithIV.html",
+		"/Users/AlfonzM/Dropbox/Public/AZTLGames/Gunslinger/Gunslinger.html",
+		"/Users/AlfonzM/Dropbox/Public/AZTLGames/CubeKnights/CubeKnights.html",
+		"/Volumes/ALFONZM/Portfolio/css/style.css",
+		"/Volumes/ALFONZM/Portfolio/js/script.js",
+		"/Volumes/ALFONZM/Portfolio/index.html",
+		"/Users/AlfonzM/Documents/Dev (local)/Websites/alfonzm.github.io/js/jquery.js",
+		"/Volumes/ALFONZM/Portfolio/js/jquery-2.1.3.min.js",
+		"/Users/AlfonzM/Documents/Dev (local)/Websites/alfonzm.github.io/img/hammerfall.png",
+		"/Volumes/ALFONZM/Portfolio/._index.html",
+		"/Users/AlfonzM/Documents/Dev (local)/Websites/alfonzm.github.io/css/bootstrap.icon-large.min.css",
+		"/Users/AlfonzM/Documents/Dev (local)/Websites/alfonzm.github.io_2.0/test.html",
+		"/Users/AlfonzM/Documents/Dev (local)/Websites/alfonzm.github.io_2.0/index.html",
+		"/Users/AlfonzM/Documents/Dev (local)/Websites/alfonzm.github.io_2.0/css/style2.css",
+		"/Users/AlfonzM/Documents/Dev (local)/Websites/alfonzm.github.io_2.0/css/style.css",
+		"/Users/AlfonzM/Documents/Dev (local)/Websites/alfonzm.github.io_2.0/js/script.js",
+		"/Users/AlfonzM/Documents/Dev (local)/Websites/alfonzm.github.io_2.0/js/bootstrap.js",
+		"/Users/AlfonzM/Desktop/generals arbiter/index.html",
+		"/Users/AlfonzM/Downloads/gotg.jpg",
+		"/Users/AlfonzM/Downloads/Blaster-master/README.md"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"game_alrea",
+			"get_random",
+			"download_imag",
+			"download_ga",
+			"getTwitter",
+			"url",
+			"'}}</",
+			"decoded",
+			"34027",
+			"page",
+			"\\n",
+			"keys",
+			"file",
+			"open",
+			"file",
+			"get_random_en",
+			"download_image",
+			"get_item",
+			"$data[0]",
+			"$i",
+			"$string",
+			"3.3",
+			"h2",
+			"webkit",
+			"section3",
+			"mac",
+			"projects",
+			"roll",
+			"<a href",
+			".page",
+			"fadeIn",
+			"centerGroup",
+			"name",
+			"abso",
+			"opacity",
+			"border",
+			"url",
+			"img",
+			"h1",
+			"h1.name",
+			"page",
+			"fadeIn",
+			"come-in",
+			"contact",
+			"</button>",
+			"btn-default"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"jsonData",
+			"$x",
+			"$str",
+			"$s",
+			"3.4",
+			"<a target='_blank' href",
+			"<a target=\"_blank\" href",
+			" <small>(3)</small></button>",
+			"btn-default\" onclick=\"Fight()",
+			"btn-default\" onclick=\"Fight()\"",
+			"btn-default onclick=\"Fight()",
+			"btn-default onclick=\"Fight()\"",
+			"btn-lg btn-default"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.py",
+					"settings":
+					{
+						"buffer_size": 4985,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1857,
+								1857
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 719.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "test.py",
+					"settings":
+					{
+						"buffer_size": 4497,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "stream.py",
+					"settings":
+					{
+						"buffer_size": 1116,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								343,
+								343
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 193.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 165.0,
+	"status_bar_visible": true
+}

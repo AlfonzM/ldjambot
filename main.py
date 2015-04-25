@@ -1,6 +1,7 @@
 from pync import Notifier
 import time
 import os
+import json
 import random
 import urllib.request
 import requests
@@ -21,9 +22,9 @@ ld_number = 'ludum-dare-32'
 # ld_number = 'minild-58'
 
 def ld_spider():
-    print("Tweeting...")
-    url = get_random_entries_page()
-    source_code = requests.get(url)
+    print("Crawling...")
+    page_url = get_random_entries_page()
+    source_code = requests.get(page_url)
     text = source_code.text
     soup = BeautifulSoup(text)
 
@@ -40,9 +41,7 @@ def ld_spider():
         print('Already exists: ' + url)
         ld_spider()
     else:
-        # get the title of that item
-        title = tds[index].find('i').string
-
+        print('Preparing tweet...')
         # get author of that item
         author = tds[index].img.contents[1]
 
@@ -50,27 +49,65 @@ def ld_spider():
         download_game_image(url)
 
         # prepare tweet string
-        tweet = prepareTweet(title, author, url)
+        tweet = makeTweet(author, url)
 
         # tweet!
-        print(time.strftime("%m/%d/%Y %I:%M %p") + '\n' + title + ' by ' + author +' \n' + url)
-        api.update_with_media('img.jpg', tweet)
+        tweetStatus = api.update_with_media('img.jpg', tweet)
+
         fw = open('data.txt', 'a')
         fw.write(str(url) + '\n')
-        Notifier.notify(title + ' by ' + author, contentImage='img.jpg', appIcon='pp.png', title='@LDJAMBot', open='http://twitter.com/ldjambot')
         print("---")
 
-# PREPARE TWEET STRING, CUT TITLE IF > 140
-def prepareTweet(title, author, url):
-    tweet = title + ' by ' + author + ' - ' + url + ' #LDJAM #gamedev #indiedev'
-    if len(tweet) > 140:
-        charactersToTrim = len(tweet) - 137
-        title = title[:-charactersToTrim] + '...'
-        tweet = prepareTweet(title, author, url)
-        print(len(tweet))
+
+def makeTweet(author, url):
+    code = requests.get(url)
+    text = code.text
+    soup = BeautifulSoup(text)
+
+    title = soup.findAll(attrs={'name' : 'twitter:title'})[1].get('content')
+
+    twitterHandle = ''
+    twitterUser = ''
+    twitterUrl = ''
+
+    if soup.findAll(attrs={'name' : 'twitter:creator'}):
+        twitterHandle = soup.findAll(attrs={'name' : 'twitter:creator'})[0].get('content')
+
+        twitterUser = twitterHandle
+
+        if 'http://twitter.com/' in twitterHandle:
+            twitterUser = twitterHandle.replace("http://twitter.com/", "")
+        elif 'https://twitter.com/' in twitterHandle:
+            twitterUser = twitterHandle.replace("https://twitter.com/", "")
+        elif 'http://www.twitter.com/' in twitterHandle:
+            twitterUser = twitterHandle.replace("http://www.twitter.com/", "")
+        elif 'https://www.twitter.com/' in twitterHandle:
+            twitterUser = twitterHandle.replace("https://www.twitter.com/", "")
+
+        twitterUser = twitterUser.replace("@", "")
+
+        twitterUrl = ' - (http://twitter.com/' + twitterUser + ')'
+
+    tweet = prepareTweet(title, author, twitterUser, url)
+
+    print(time.strftime("%m/%d/%Y %I:%M %p") + '\n' + title + ' by ' + author + twitterUrl + '\nLD Entry Page: ' + url)
+    Notifier.notify(title + ' by ' + author + twitterHandle, contentImage='img.jpg', appIcon='pp.png', title='@LDJAMBot', open='http://twitter.com/ldjambot')
     
     return tweet
 
+def prepareTweet(title, author, twitterUser, url):
+    if twitterUser != '':
+        author = '@' + twitterUser
+
+    tweet = title + ' by ' + author + ' - ' + url + ' #LDJAM #gamedev #indiedev' 
+
+    # TRIM IF > 140 CHARACTERS    
+    if len(tweet) > 140:
+        charactersToTrim = len(tweet) - 137
+        title = title[:-charactersToTrim] + '...'
+        tweet = title + ' by ' + author + twitterHandle + ' - ' + url + ' #LDJAM #gamedev #indiedev' 
+
+    return tweet
 
 # DOWNLOAD FIRST SCREENSHOT IN A ENTRY PAGE
 def download_game_image(game_url):
@@ -115,7 +152,6 @@ def game_already_tweeted(url):
         return False
 
     return True
-
 
 # START BOT
 ld_spider()
